@@ -1,0 +1,60 @@
+[{
+        "id": "EF1CC5BB-0000-4D8E-AB98-5FA4E00B6A00",
+        "name": "Futian Dumpling",
+        "img": "dumpling",
+        "distance": "3.4km",
+        "address": "3490 Kingsway #7, Vancouver, BC V5R 5L7",
+        "dishCombos": [{
+                "id": "EF1CC5BB-0001-4D8E-AB98-5FA4E00B6A01",
+                "comboImg": "dish1",
+                "name": "Single Meal",
+                "validDate": "0901/2020",
+                "desc": "16 dumplings + 1 side dish + 1 drink",
+                "price": 13.99,
+                "dish": ["dish_dumpling", "dish_cucumber", "dish_coke"]
+
+            },
+            {
+                "id": "EF1CC5BB-0001-4D8E-AB98-5FA4E00B6A02",
+                "comboImg": "dish2",
+                "name": "Cold cucumber",
+                "validDate": "0901/2020",
+                "desc": "Cold cucumber",
+                "price": 8.99,
+                "dish": ["dish_dumpling"]
+
+            }
+        ]
+    },
+    {
+        "id": "EF1CC5BB-0000-4D8E-AB98-5FA4E00B6A04",
+        "name": "Haidilao Hotpot",
+        "img": "haidilao",
+        "distance": "5.4km",
+        "address": "3490 Kingsway #7, Vancouver, BC V5R 5L7",
+        "dishCombos": [{
+                "id": "EF1CC5BB-0001-4D8E-AB98-5FA4E00B6A05",
+                "comboImg": "dish1",
+                "name": "Single Meal",
+                "validDate": "0901/2020",
+                "desc": "16 dumplings + 1 side dish + 1 drink",
+                "price": 13333.99,
+                "dish": ["dish_dumpling", "dish_cucumber", "dish_coke"]
+
+            },
+            {
+                "id": "EF1CC5BB-0001-4D8E-AB98-5FA4E00B6A06",
+                "comboImg": "dish2",
+                "name": "Cold cucumber",
+                "validDate": "0901/2020",
+                "desc": "Cold cucumber",
+                "price": 83333.99,
+                "dish": ["dish_dumpling", "dish_cucumber", "dish_coke"]
+
+            }
+        ]
+    }
+
+
+
+]
