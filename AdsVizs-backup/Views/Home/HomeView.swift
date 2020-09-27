@@ -16,68 +16,73 @@ struct HomeView: View {
         ScrollView(.vertical, showsIndicators: false){
             VStack{
                 //top
+                
                 ZStack{
                     
-                    ZStack{
-                        VStack{
+                    VStack{
+                        
+                        GeometryReader{g in
+                            // Using GeomtryReader For Getting Remaining Height...
+                            Carousel(width: UIScreen.main.bounds.width, page: self.$page, height: 300).frame(width: UIScreen.main.bounds.width, height: 300)
                             
-                            GeometryReader{g in
-                                // Using GeomtryReader For Getting Remaining Height...
-                                Carousel(width: UIScreen.main.bounds.width, page: self.$page, height: 200)
-                            }.frame(width: UIScreen.main.bounds.width, height: 200)
+                            Image("gradient_t2b_home_banner")
+                                .aspectRatio(contentMode: .fit)
+                                .edgesIgnoringSafeArea(.top)
                             
-                            PageControl(page: self.$page)
-                                .padding(.top, -25)
-                        }
+                        }.frame(width: UIScreen.main.bounds.width, height: 300)
                         
-                        
-                        //greeding + avatar
-                        
-                        HStack{
-                            Text("Welcome, user.name")
-                                .bold()
-                                .font(.system(size: 24))
-                            
-                            Spacer()
-                            
-                            Image(systemName: "person.crop.circle.fill")
-                                .resizable()
-                                .foregroundColor(.gray)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                                .frame(width:35, height: 35)
-                        }.padding(.horizontal).offset(x:0, y:-100)
-                        
-                        
+                        PageControl(page: self.$page)
+                            .padding(.top,-1)
                     }
+                    
+                    //greeding + avatar
+                    
+                    HStack{
+                        Text("Hi, My friend")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.system(size: 24))
+                        
+                        Spacer()
+                        
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .foregroundColor(.gray)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .frame(width:35, height: 35)
+                            .shadow(color: Color.black.opacity(0.2), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                    }.padding(.horizontal).offset(x:0, y:-110)
+                    
+                    
+                    
                 }
                 
-                
-                
-                //promo title
-                HStack{
-                    Image("icon_promo")
-                    Text("Feature")
-                    Spacer()
-                }.padding(.top).padding(.horizontal)
-                
-                
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack(spacing: 20){
-                        ForEach(self.store){storeItem in
-                            //                            ForEach(Store.dishCombos){ comboItem in
-                            CardCombo(store: storeItem)
-                            //                            }
-                        }
-                    }
-                }.padding(.horizontal)
             }
+            //promo title
+            HStack{
+                Text("Popular")
+                    .fontWeight(.medium)
+                    .font(.title)
+                Spacer()
+            }.padding(.horizontal)
             
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing: 20){
+                    ForEach(self.store){storeItem in
+//                        ForEach(self.store.dish){ comboItem in
+                            CardCombo(store: storeItem)
+//                        }
+                    }
+                }
+            }.padding(.horizontal)
             
             //discover
             HStack{
-                Image("icon_discover")
                 Text("Discover")
+                    .fontWeight(.medium)
+                    .font(.title)
                 Spacer()
             }.padding(.top).padding(.horizontal)
             

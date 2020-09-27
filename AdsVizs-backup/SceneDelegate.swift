@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    let store = Bundle.main.decode([Store].self, from: "storeData.json")
     var window: UIWindow?
 
 

@@ -25,7 +25,7 @@ struct CardCombo: View {
                     .resizable()
                     .frame(width: 250, height: 200)
                     .aspectRatio(contentMode: .fit)
-                    .cornerRadius(15)
+                    .cornerRadius(7)
                     .overlay(
                         Rectangle()
                             .opacity(0.2)
@@ -54,7 +54,7 @@ struct CardCombo: View {
                 
             }
             .frame(width: 250, height: 200)
-            .cornerRadius(15)
+            .cornerRadius(7)
             .onTapGesture {
                 self.show.toggle()
                 print("to store info \(self.show)")

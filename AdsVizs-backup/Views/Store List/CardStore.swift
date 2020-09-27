@@ -25,14 +25,14 @@ struct CardStore: View {
                         //order matters
                         .resizable()
                         .frame(width:UIScreen.main.bounds.width-30, height: 166)
-                        .cornerRadius(6)
+                        .cornerRadius(7)
                         .aspectRatio(contentMode: .fill)
                     
                     //gradient
                     Image("gradient_b2t")
                         .resizable()
                         .frame(width:UIScreen.main.bounds.width-30, height: 166)
-                        .cornerRadius(6)
+                        .cornerRadius(7)
                         .aspectRatio(contentMode: .fill)
                     
                     

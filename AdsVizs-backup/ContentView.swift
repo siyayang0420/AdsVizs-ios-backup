@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected = "Home"
-    let store = Bundle.main.decode([Store].self, from: "storeData.json")
+//    let store : Store
     var body: some View {
         NavigationView{
             VStack{
